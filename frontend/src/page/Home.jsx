@@ -51,7 +51,7 @@ const Home = () => {
                         <div className="logo-text"><p>FilterPixel</p></div>
                     </div>
                     <button className="btn" onClick={handleLogout}>
-                        <span className="logo-text">Hi Keshav!</span>
+                        <span className="logo-text">Hi {auth.currentUser.displayName}!</span>
                         <span className="profile-icon">
                             <img src="/profile.png" alt="Profile Image"/>
                         </span>
