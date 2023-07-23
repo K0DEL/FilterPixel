@@ -12,7 +12,7 @@ def getAWSImages():
     my_bucket = s3.Bucket(BUCKET_NAME)
     for my_bucket_object in my_bucket.objects.all():
         imageURLs.append(u'https://s3-{0}.amazonaws.com/{1}/{2}'.format(AWS_DEFAULT_REGION,BUCKET_NAME,my_bucket_object.key))
-    return imageURLs[0:6]
+    return imageURLs
 
 
 # if __name__ == '__main__':

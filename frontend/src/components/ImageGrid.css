@@ -2,21 +2,22 @@
     margin-top: 2rem;
     display: grid;
     padding: 0% 10%;
-    grid-template-columns: 1fr 1fr 1fr; /* Creates 3 columns */
-    grid-template-rows: 30vh 30vh;
-    gap: 2rem; /* Adjust the gap between images as needed */
-    justify-items: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 30vh;
+    gap: 2rem; 
+    grid-gap: 2rem;
+    justify-items: center;
+    align-items: center;
 }
-  
-  .grid-item {
+
+.grid-item {
     border: 0.5rem solid #2E2E2E;
-    width: 100%; /* Each item takes 33.33% of the container's width */
-    height: 100%; /* Each row takes 50% of the container's height */
+    width: 100%; 
+    height: 100%; 
 }
-  
+
 .image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Maintain aspect ratio and fit the image within the container */
+    object-fit: cover; 
 }

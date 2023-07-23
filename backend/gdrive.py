@@ -33,7 +33,7 @@ def getGoogleImages() -> list:
         folderId = service.files().list(q = "mimeType = 'application/vnd.google-apps.folder' and name = 'FilterPixel'", pageSize=10, fields="nextPageToken, files(id, name)").execute()
         folderIdResult = folderId.get('files', [])
         id = folderIdResult[0].get('id')
-        results = service.files().list(q = "'" + id + "' in parents", pageSize=9, fields="nextPageToken, files(id, name)").execute()
+        results = service.files().list(q = "'" + id + "' in parents", fields="nextPageToken, files(id, name)").execute()
         items = results.get('files', [])
 
         imageURLs = []
@@ -58,7 +58,7 @@ def getGoogleImages() -> list:
             #     f.write(file.read())
             #     f.close()
         
-        return imageURLs[0:6]
+        return imageURLs
             
     except HttpError as error:
         # TODO(developer) - Handle errors from drive API.

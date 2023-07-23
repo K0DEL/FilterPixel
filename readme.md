@@ -77,12 +77,12 @@ yarn install
 4. Start the React development server.
 
 ```bash
-npm start
+npm run dev
 # or
-yarn start
+yarn run dev
 ```
 
-The React frontend will now be running on `http://localhost:3000`.
+The React frontend will now be running on `http://localhost:5173`.
 
 ## Step 4: Accessing the Application
 
@@ -90,7 +90,7 @@ Now that both the Flask backend and React frontend are running, you can access t
 
 - Backend: Open `127.0.0.1:5000/` in your browser to see if the backend is running correctly. You might see a JSON response or a message confirming the backend's functionality.
 
-- Frontend: Open `http://localhost:3000` in your browser to access the React frontend. The React app will communicate with the Flask backend on `127.0.0.1:5000/` for data and functionality.
+- Frontend: Open `http://localhost:5173` in your browser to access the React frontend. The React app will communicate with the Flask backend on `127.0.0.1:5000/` for data and functionality.
 
 ## Additional Notes
 
